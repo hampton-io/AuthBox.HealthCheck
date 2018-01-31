@@ -5,12 +5,14 @@ const app = express();
 
 app.use('/healthcheck', healthcheck({
   config: {
-    good: {
-      connectionString: 'redis://localhost:6379',
-    },
-    bad: {
-      connectionString: 'redis://nosuchhost:1234',
-    },
+    redis: {
+      good: {
+        connectionString: 'redis://localhost:6379',
+      },
+      bad: {
+        connectionString: 'redis://nosuchhost:1234',
+      },
+    }
   },
 }));
 
