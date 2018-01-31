@@ -1,12 +1,5 @@
-# DfE Express Boilerplate application
+# DfE Express Health Check
+[![Build Status](https://travis-ci.org/DFE-Digital/login.dfe.healthcheck.svg?branch=master)](https://travis-ci.org/DFE-Digital/login.dfe.healthcheck)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
-This is a starting point for node applications, it included the basics needed to setup a Web application or API. 
-
-### Default setting for:
-
-- ESLint
-- Testing (Jest)
-- Project structure
-- Express Layout
-- Express Middleware
-
+Express middleware to provide health check endpoints
