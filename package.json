@@ -2,8 +2,9 @@
   "name": "login.dfe.healthcheck",
   "version": "1.0.0",
   "description": "Express middleware to provide health check endpoints",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "dev": "node ./test/harness.js",
     "test": "./node_modules/.bin/jest"
   },
   "engines": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/DFE-Digital/login.dfe.healthcheck#readme",
   "dependencies": {
     "express": "^4.15.4",
+    "ioredis": "^3.2.2",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
