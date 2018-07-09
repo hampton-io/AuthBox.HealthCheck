@@ -8,11 +8,12 @@ describe('When running redis check', () => {
 
   beforeEach(() => {
     authenticate = jest.fn();
-
+    close = jest.fn();
     Sequelize.mockReset();
     Sequelize.mockImplementation(() => {
       return {
         authenticate,
+        close,
       };
     });
   });
