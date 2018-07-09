@@ -5,6 +5,9 @@ const redisCheck = require('./../lib/redisCheck');
 const EventEmitter = require('events');
 
 class RedisStub extends EventEmitter {
+  disconnect() {
+
+  }
 }
 
 describe('When running redis check', () => {
