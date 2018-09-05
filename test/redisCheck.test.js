@@ -22,7 +22,7 @@ describe('When running redis check', () => {
 
   it('then it should check if key is redisurl', async () => {
     const checkPromise = redisCheck('redisUrl', 'redis://unit.test:6379', 'path.to.key', null);
-    stub.emit('connect');
+    stub.emit('ready');
     await checkPromise;
 
     expect(Redis.mock.calls).toHaveLength(1);
@@ -31,7 +31,7 @@ describe('When running redis check', () => {
 
   it('then it should check if key is connectionstring and value starts with redis://', async () => {
     const checkPromise = redisCheck('connectionString', 'redis://unit.test:6379', 'path.to.key', null);
-    stub.emit('connect');
+    stub.emit('ready');
     await checkPromise;
 
     expect(Redis.mock.calls).toHaveLength(1);
@@ -40,7 +40,7 @@ describe('When running redis check', () => {
 
   it('then it should not check if key is connectionstring but value does not starts with redis://', async () => {
     const checkPromise = redisCheck('connectionString', 'sql://unit.test:6379', 'path.to.key', null);
-    stub.emit('connect');
+    stub.emit('ready');
     await checkPromise;
 
     expect(Redis.mock.calls).toHaveLength(0);
@@ -51,7 +51,7 @@ describe('When running redis check', () => {
       type: 'redis',
       params: { 'constr': 'redis://unit.test:6379' }
     }, 'path.to.key', null);
-    stub.emit('connect');
+    stub.emit('ready');
     await checkPromise;
 
     expect(Redis.mock.calls).toHaveLength(1);
@@ -60,7 +60,7 @@ describe('When running redis check', () => {
 
   it('then it should not check if key is not redis oriented', async () => {
     const checkPromise = redisCheck('level', 'some-value', 'path.to.key', null);
-    stub.emit('connect');
+    stub.emit('ready');
     await checkPromise;
 
     expect(Redis.mock.calls).toHaveLength(0);
@@ -68,7 +68,7 @@ describe('When running redis check', () => {
 
   it('then it should return ok if redis connects', async () => {
     const checkPromise = redisCheck('connectionString', 'redis://unit.test:6379', 'path.to.key', null);
-    stub.emit('connect');
+    stub.emit('ready');
     const actual = await checkPromise;
 
     expect(actual).toMatchObject({
