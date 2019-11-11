@@ -8,7 +8,7 @@
     "test": "./node_modules/.bin/jest"
   },
   "engines": {
-    "node": "8.x.x"
+    "node": "10.x.x"
   },
   "repository": {
     "type": "git",
@@ -21,20 +21,20 @@
   },
   "homepage": "https://github.com/DFE-Digital/login.dfe.healthcheck#readme",
   "dependencies": {
-    "express": "^4.15.4",
-    "ioredis": "^3.2.2",
-    "lodash": "^4.17.11",
-    "pg": "^7.4.1",
-    "sequelize": "^5.8.12"
+    "express": "^4.17.1",
+    "ioredis": "^4.14.1",
+    "lodash": "^4.17.15",
+    "pg": "^7.12.1",
+    "sequelize": "^4.44.3"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
+    "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0",
-    "jest": "^24.8.0",
-    "jest-cli": "^24.8.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^25.0.0",
+    "jest-cli": "^25.0.0",
     "node-mocks-http": "^1.6.6",
-    "tedious": "^6.2.0"
+    "tedious": "^2.6.4"
   },
   "jest": {
     "testEnvironment": "node",
