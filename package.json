@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/floydprice/AuthBox.HealthCheck.git"
+    "url": "git+https://github.com/hampton-io/AuthBox.HealthCheck.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DFE-Digital/login.dfe.healthcheck/issues"
+    "url": "https://github.com/hampton-io/AuthBox.HealthCheck/issues"
   },
-  "homepage": "https://github.com/DFE-Digital/login.dfe.healthcheck#readme",
+  "homepage": "https://github.com/hampton-io/AuthBox.HealthCheck#readme",
   "dependencies": {
     "express": "^4.17.1",
     "ioredis": "^4.14.1",
