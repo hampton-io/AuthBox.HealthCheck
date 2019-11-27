@@ -1,5 +1,5 @@
 {
-  "name": "AuthBox.HealthCheck",
+  "name": "authbox.healthcheck",
   "version": "1.0.0",
   "description": "Express middleware to provide health check endpoints for AuthBox services",
   "main": "lib/index.js",
